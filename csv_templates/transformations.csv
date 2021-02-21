@@ -1,0 +1,4 @@
+eventId,bizStep,informationProvider,productOwner,eventTime,eventTimeZoneOffset,disposition,readPoint,bizLocation,inputQuantityList,,,outputQuantityList,,,humanWelfarePolicy,ilmd,,,,,,,,,,,,,,,,,,,
+,,,,,,,id,id,quantityElement,,,quantityElement,,,,lotNumber,productionDate,harvestStartDate,harvestEndDate,itemExpirationDate,aquacultureMethod,proteinSource,countryOfOrigin,bestBeforeDate,preservationTechniqueCode,vesselCatchInformationList,,,,,certificationList,,,,
+,,,,,,,,,epcClass,quantity,uom,epcClass,quantity,uom,,,,,,,,,,,,vesselCatchInformation,,,,,certification,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,vesselName,vesselID,vesselPublicRegistry,vesselFlagState,imoNumber,certificationType,certificationAgency,certificationIdentification,certificationStandard,certificationValue

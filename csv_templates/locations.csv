@@ -1,0 +1,3 @@
+informationProvider,id,name,unloadingPort,streetAddressOne,streetAddressTwo,city,state,postalCode,countryCode,latitude,longitude,contact,telephone,email,vesselID,vesselName,imoNumber,vesselFlagState,vesselOwnerName,vesselOrganizationName,fishingGearTypeCode,geofencePolygon,
+,,,,,,,,,,,,,,,,,,,,,,polygonPoint,
+,,,,,,,,,,,,,,,,,,,,,,seq,value

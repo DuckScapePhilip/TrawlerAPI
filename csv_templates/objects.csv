@@ -1,0 +1,5 @@
+eventId,action,bizStep,informationProvider,productOwner,eventTime,eventTimeZoneOffset,disposition,epcList,readPoint,bizLocation,bizTransactionList,,transshipStartDate,transshipEndDate,landingEndDate,landingStartDate,unloadingPort,humanWelfarePolicy,extension,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,epc,id,id,bizTransaction,,,,,,,,sourceList,,destinationList,,ilmd,,,,,,,,,,,,,,,,,,,,,,quantityList,,
+,,,,,,,,,,,type,value,,,,,,,source,,destination,,harvestEndDate,harvestStartDate,productionMethodCode,broodstockSource,certificationList,,,,,vesselCatchInformationList,,,,,,,,,,,,,quantityElement,,
+,,,,,,,,,,,,,,,,,,,type,value,type,value,,,,,certification,,,,,vesselCatchInformation,,,,,,,,,,,,,epcClass,quantity,uom
+,,,,,,,,,,,,,,,,,,,,,,,,,,,certificationType,certificationAgency,certificationIdentification,certificationStandard,certificationValue,catchArea,rmfoArea,economicZone,subnationalPermitArea,fishingGearTypeCode,vesselFlagState,vesselID,vesselName,gpsAvailability,vesselPublicRegistry,satelliteTrackingAuthority,fisheryImprovementProject,imoNumber,,,

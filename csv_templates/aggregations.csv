@@ -1,0 +1,5 @@
+eventId,action,bizStep,informationProvider,productOwner,parentID,eventTime,eventTimeZoneOffset,disposition,childEPCs,readPoint,bizLocation,extension,,,,,,,
+,,,,,,,,,epc,id,id,childQuantityList,,,certificationList,,,,
+,,,,,,,,,,,,quantityElement,,,certification,,,,
+,,,,,,,,,,,,epcClass,quantity,uom,certificationType,certificationAgency,certificationIdentification,certificationStandard,certificationValue
+,,,,,,,,,,,,,,,,,,,
