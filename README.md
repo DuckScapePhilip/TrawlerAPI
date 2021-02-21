@@ -8,7 +8,36 @@ A GET against the base URL (`/`) will return "Hello World" to indicate it is up 
 
 A POST against `/csv` will allow you to convert CSV into EPCIS XML. 
 
-POST: `http://gdst-trawler-api-13856.nodechef.com/csv`
+## CSV to EPCIS XML
+
+The converter requires a JSON object posted against the `/csv` path with properties `businessHeaderCsv`, `epcClassCsv`, `locationCsv`, `objectEventCsv`, `transformationEventCsv`, `aggregationEventCsv`.
+
+This is an example with no CSV lines on each one. 
+```
+{
+    "businessHeaderCsv": "senderId,senderName,senderEmail,receiverId,receiverName,receiverEmail",
+
+    "epcClassCsv": "informationProvider,id,speciesForFisheryStatisticsPurposesCode,descriptionShort,speciesForFisheryStatisticsPurposesName,tradeItemConditionCode,additionalTradeItemIdentification ,preservationTechniqueCode,grossWeight,\r\n,,,,,,,,measurement,\r\n,,,,,,,,value,unitCode",
+
+    "locationCsv": "informationProvider,id,name,unloadingPort,streetAddressOne,streetAddressTwo,city,state,postalCode,countryCode,latitude,longitude,contact,telephone,email,vesselID,vesselName,imoNumber,vesselFlagState,vesselOwnerName,vesselOrganizationName,fishingGearTypeCode,geofencePolygon,\r\n,,,,,,,,,,,,,,,,,,,,,,polygonPoint,\r\n,,,,,,,,,,,,,,,,,,,,,,seq,value",
+
+    "objectEventCsv": "eventId,action,bizStep,informationProvider,productOwner,eventTime,eventTimeZoneOffset,disposition,epcList,readPoint,bizLocation,bizTransactionList,,transshipStartDate,transshipEndDate,landingEndDate,landingStartDate,unloadingPort,humanWelfarePolicy,extension,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n,,,,,,,,epc,id,id,bizTransaction,,,,,,,,sourceList,,destinationList,,ilmd,,,,,,,,,,,,,,,,,,,,,,quantityList,,\r\n,,,,,,,,,,,type,value,,,,,,,source,,destination,,harvestEndDate,harvestStartDate,productionMethodCode,broodstockSource,certificationList,,,,,vesselCatchInformationList,,,,,,,,,,,,,quantityElement,,\r\n,,,,,,,,,,,,,,,,,,,type,value,type,value,,,,,certification,,,,,vesselCatchInformation,,,,,,,,,,,,,epcClass,quantity,uom\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,,certificationType,certificationAgency,certificationIdentification,certificationStandard,certificationValue,catchArea,rmfoArea,economicZone,subnationalPermitArea,fishingGearTypeCode,vesselFlagState,vesselID,vesselName,gpsAvailability,vesselPublicRegistry,satelliteTrackingAuthority,fisheryImprovementProject,imoNumber,,,",
+
+    "transformationEventCsv": "eventId,bizStep,informationProvider,productOwner,eventTime,eventTimeZoneOffset,disposition,readPoint,bizLocation,inputQuantityList,,,outputQuantityList,,,humanWelfarePolicy,ilmd,,,,,,,,,,,,,,,,,,,\r\n,,,,,,,id,id,quantityElement,,,quantityElement,,,,lotNumber,productionDate,harvestStartDate,harvestEndDate,itemExpirationDate,aquacultureMethod,proteinSource,countryOfOrigin,bestBeforeDate,preservationTechniqueCode,vesselCatchInformationList,,,,,certificationList,,,,\r\n,,,,,,,,,epcClass,quantity,uom,epcClass,quantity,uom,,,,,,,,,,,,vesselCatchInformation,,,,,certification,,,,\r\n,,,,,,,,,,,,,,,,,,,,,,,,,,vesselName,vesselID,vesselPublicRegistry,vesselFlagState,imoNumber,certificationType,certificationAgency,certificationIdentification,certificationStandard,certificationValue\n",
+
+    "aggregationEventCsv": "eventId,action,bizStep,informationProvider,productOwner,parentID,eventTime,eventTimeZoneOffset,disposition,childEPCs,readPoint,bizLocation,extension,,,,,,,\r\n,,,,,,,,,epc,id,id,childQuantityList,,,certificationList,,,,\r\n,,,,,,,,,,,,quantityElement,,,certification,,,,\r\n,,,,,,,,,,,,epcClass,quantity,uom,certificationType,certificationAgency,certificationIdentification,certificationStandard,certificationValue\r\n,,,,,,,,,,,,,,,,,,,\n"
+}
+```
+
+There are template CSV files with headers stored in the `csv_examples` foler in the GitHub at `https://github.com/DuckScapePhilip/TrawlerAPI`.
+
+These template CSV can be filled in and then the CSV is set to the corresponding property on the body.
+
+## Example
+
+METHOD: `POST`
+
+URL: `http://gdst-trawler-api-13856.nodechef.com/csv`
 
 BODY:
 ```
