@@ -29,7 +29,7 @@ This is an example with no CSV lines on each one.
 }
 ```
 
-There are template CSV files with headers stored in the `csv_examples` foler in the GitHub at `https://github.com/DuckScapePhilip/TrawlerAPI`.
+There are template CSV files with headers stored in the `csv_templates` foler in the GitHub at `https://github.com/DuckScapePhilip/TrawlerAPI`.
 
 These template CSV can be filled in and then the CSV is set to the corresponding property on the body.
 
