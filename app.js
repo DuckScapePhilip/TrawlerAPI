@@ -55,6 +55,6 @@ app.post('/csv', upload.array(), async function (req, res, next) {
   res.send(result);
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
