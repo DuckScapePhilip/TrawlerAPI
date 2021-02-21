@@ -6,22 +6,6 @@ const bodyParser = require('body-parser')
 const multer = require('multer') // v1.0.5
 const upload = multer() // for parsing multipart/form-data
 
-var args = {};
-var num = 1;
-for (var arg of process.argv.slice(2)) {
-  if (arg.indexOf('=') > -1) {
-    var split = arg.split('=');
-    args[split[0]] = split[1];
-  }
-  else {
-    args[num] = arg;
-  }
-  num++;
-}
-if (args.port) {
-  port = parseInt(args.port);
-}
-
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
