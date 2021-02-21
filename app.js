@@ -1,7 +1,7 @@
 const express = require('express')
 const trawler = require('@gftc/trawler')
 const app = express()
-var port = 3000
+const port = process.env.PORT || 3000;
 const bodyParser = require('body-parser')
 const multer = require('multer') // v1.0.5
 const upload = multer() // for parsing multipart/form-data
@@ -55,6 +55,6 @@ app.post('/csv', upload.array(), async function (req, res, next) {
   res.send(result);
 })
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
