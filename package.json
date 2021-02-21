@@ -1,0 +1,20 @@
+{
+  "name": "trawler-api-server",
+  "version": "1.0.0",
+  "description": "A REST API for accessing the server.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node app.js port=3000",
+    "build" : "node app.js port=443"
+  },
+  "author": "Philip Heggelund",
+  "license": "MIT",
+  "dependencies": {
+    "@gftc/trawler": "^1.2.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "minimist": "^1.2.5",
+    "multer": "^1.4.2"
+  }
+}
