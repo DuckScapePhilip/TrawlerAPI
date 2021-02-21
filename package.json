@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node app.js port=3000",
-    "build" : "node app.js port=3000"
+    "start" : "node app.js port=3000",
+    "web" : "node app.js port=3000"
   },
   "author": "Philip Heggelund",
   "license": "MIT",
